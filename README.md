@@ -1,6 +1,7 @@
 # Reto Figuras Geometricas
 - Decidí abordar el modelado de mi solución de esta manera porque siento que es con la que más cumplo con los principios de la programación orientada a objetos y los principios SOLID, el código pasó por varias modificaciones hasta tener el modelado actual, antes de crear alguna clase modele un poco en mi mente que clase seria la superclase que le heredara al resto sus atributos y qué interfaz tenia que crear para que las clases que la implementaran aplicaran su comportamiento en cuanto a los métodos, teniendo esto en cuenta fui construyendo el código sin nunca dejarme de preguntar si cumplia o no los principios POO y SOLID.
-El codigo cumple con los siguientes principios de la Programacion Orientada a Objetos (POO)
+El código cumple con los siguientes principios de la Programación Orientada a Objetos (POO)
+* IMPORTANTE: cuando cree una figura volverá a salir las opciones para crear otra figura, el dibujo de la figura se imprime más arriba, para que verifique
 
 * Pasaré a exponer qué principios POO y SOLID cumplen mi código según mi criterio
 ***
@@ -27,7 +28,7 @@ El codigo cumple con los siguientes principios de la Programacion Orientada a Ob
 * Principios SOLID que se cumplen:
 
 ## Principio de responsabilidad única (SRP):
-- cada clase tiene una sola responsabilidad. Por ejemplo, la clase Figura solo contiene propiedades compartidas entre las figuras, sin métodos adicionales. Las interfaces CalculoBidimensional y CalculoTridimensional se encargan de definir los métodos para el cálculo de áreas y perímetros. La clase Calculo se encarga de realizar los cálculos.
+- cada clase tiene una sola responsabilidad. Por ejemplo, la clase Figura únicamente contiene propiedades compartidas entre las figuras, sin métodos adicionales. Las interfaces CalculoBidimensional y CalculoTridimensional se encargan de definir los métodos para el cálculo de áreas y perímetros. La clase Calculo se encarga de realizar los cálculos.
 
 ## Principio de abierto/cerrado (OCP):
 - el código es extensible sin modificar el código fuente original. Las figuras existentes no necesitan ser cambiadas si se agregan nuevas figuras, por ejemplo, una esfera. En lugar de eso, simplemente se deben implementar las interfaces correspondientes y agregar el metodo para crear el objeto.
