@@ -7,7 +7,7 @@ public class CrearFigura {
     }
     Cuadrado cuadrado = new Cuadrado(nombre, longitudDeUnLado);
     Calcular calcular = new Calcular(cuadrado);
-    DibujarFigura.dibujarFigura(calcular);
+    DibujarFigura.dibujarFiguraBidimencional(calcular);
   }
 
   public static void crearRectangulo(String nombre, double largo, double ancho) throws Exception {
@@ -16,7 +16,7 @@ public class CrearFigura {
     }
     Rectangulo rectangulo = new Rectangulo(nombre, largo, ancho);
     Calcular calcular = new Calcular(rectangulo);
-    DibujarFigura.dibujarFigura(calcular);
+    DibujarFigura.dibujarFiguraBidimencional(calcular);
   }
 
   public static void crearTrianguloEquilatero(String nombre, double longitud) throws Exception {
@@ -25,7 +25,7 @@ public class CrearFigura {
     }
     TrianguloEquilatero trianguloEquilatero = new TrianguloEquilatero(nombre, longitud);
     Calcular calcular = new Calcular(trianguloEquilatero);
-    DibujarFigura.dibujarFigura(calcular);
+    DibujarFigura.dibujarFiguraBidimencional(calcular);
   }
 
   public static void crearTrianguloIsosceles(String nombre, double ladoIgual, double base) throws Exception {
@@ -34,7 +34,7 @@ public class CrearFigura {
     }
     TrianguloIsosceles trianguloIsosceles = new TrianguloIsosceles(nombre, ladoIgual, base);
     Calcular calcular = new Calcular(trianguloIsosceles);
-    DibujarFigura.dibujarFigura(calcular);
+    DibujarFigura.dibujarFiguraBidimencional(calcular);
   }
 
   public static void crearTrianguloEscaleno(String nombre, double lado1, double lado2, double lado3) throws Exception {
@@ -43,6 +43,14 @@ public class CrearFigura {
     }
     TrianguloEscaleno trianguloEscaleno = new TrianguloEscaleno(nombre, lado1, lado2, lado3);
     Calcular calcular = new Calcular(trianguloEscaleno);
-    DibujarFigura.dibujarFigura(calcular);
+    DibujarFigura.dibujarFiguraBidimencional(calcular);
+  }
+  public static void crearCubo(String nombre, double lado) throws Exception {
+    if (lado > 10 || lado < 1) {
+      throw new Exception("La longitud de los lados no puede ser mayor a 10 cm ni menor o igual a 0.");
+    }
+    Cubo cubo = new Cubo(nombre, lado);
+    Calcular calcular = new Calcular(cubo);
+    DibujarFigura.dibujarFiguraTridimencional(calcular);
   }
 }

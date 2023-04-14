@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
-  public static void main(String[] args) throws Exception {
+  public static void main(String[] args) {
 
     System.out.println("Binvenido, puedes crear cualquiera de las figuras elegibles y explorar entre las opciones");
     //------------------------------------------------
@@ -18,25 +18,26 @@ public class Main {
     System.out.println("1. Cuadrado");
     System.out.println("2. Rectángulo");
     System.out.println("3. Triángulo");
-    System.out.println("4. Salir");
+    System.out.println("4. Cubo");
+    System.out.println("6. Salir");
 
     int opcion = scanner.nextInt();
     scanner.nextLine();
 
     switch (opcion) {
-      case 1:
+      case 1 -> {
         System.out.print("Ingresa un nombre para el cuadrado: ");
         String nombreC = scanner.nextLine();
         System.out.print("Ingrese la longitud del lado del cuadrado: ");
         double longitud = Double.parseDouble(scanner.nextLine());
         // Crear un cuadrado
         try {
-          CrearFigura.crearCuadrado(nombreC,longitud);
+          CrearFigura.crearCuadrado(nombreC, longitud);
         } catch (Exception e) {
           System.out.println("Error: " + e.getMessage() + "\n Intente nuevamente.");
         }
-        break;
-      case 2:
+      }
+      case 2 -> {
         System.out.print("Ingresa un nombre para el rectangulo: ");
         String nombreR = scanner.nextLine();
         System.out.print("Ingresa el largo del rectangulo: ");
@@ -49,17 +50,15 @@ public class Main {
         } catch (Exception e) {
           System.out.println("Error: " + e.getMessage() + "\nIntente nuevamente");
         }
-        break;
-      case 3:
+      }
+      case 3 -> {
         System.out.println("1. Equilatero");
         System.out.println("2. Isosceles");
         System.out.println("3. Escaleno");
-
         int opcionT = scanner.nextInt();
         scanner.nextLine();
-
         switch (opcionT) {
-          case 1:
+          case 1 -> {
             System.out.print("Ingresa un nombre para el triangulo: ");
             String nombreE = scanner.nextLine();
             System.out.print("Ingrese la longitud de un lado del triangulo: ");
@@ -70,8 +69,8 @@ public class Main {
             } catch (Exception e) {
               System.out.println("Error: " + e.getMessage() + "\nIntente nuevamente");
             }
-            break;
-          case 2:
+          }
+          case 2 -> {
             System.out.print("Ingresa un nombre para el triangulo: ");
             String nombreI = scanner.nextLine();
             System.out.print("Ingrese la longitud de los lados iguales: ");
@@ -84,8 +83,8 @@ public class Main {
             } catch (Exception e) {
               System.out.println("Error: " + e.getMessage() + "\nIntente nuevamente");
             }
-            break;
-          case 3:
+          }
+          case 3 -> {
             System.out.print("Ingresa un nombre para el triangulo: ");
             String nombreEs = scanner.nextLine();
             System.out.print("Ingrese la longitud del primer lado: ");
@@ -100,17 +99,27 @@ public class Main {
             } catch (Exception e) {
               System.out.println("Error: " + e.getMessage() + "\nIntente nuevamente");
             }
-            break;
+          }
         }
-        break;
-      case 4:
+      }
+      case 4 -> {
+        System.out.print("Ingresa un nombre para el cubo: ");
+        String nombreCu = scanner.nextLine();
+        System.out.print("Ingresa la longitud de un lado: ");
+        double longitudCu = Double.parseDouble(scanner.nextLine());
+        // Crear un cubo
+        try {
+          CrearFigura.crearCubo(nombreCu,longitudCu);
+        } catch (Exception e) {
+          System.out.println("Error: " + e.getMessage() + "\nIntente nuevamente");
+        }
+      }
+      case 5 -> {
         // Salir del programa
         System.out.println("Saliendo del programa...");
         System.exit(0);
-        break;
-      default:
-        System.out.println("Opción no válida");
-        break;
+      }
+      default -> System.out.println("Opción no válida");
     }
   }
 }

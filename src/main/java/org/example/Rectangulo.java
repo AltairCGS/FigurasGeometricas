@@ -1,6 +1,6 @@
 package org.example;
 
-public class Rectangulo extends Figura implements FiguraBidimencional{
+public class Rectangulo extends Figura implements CalculoBidimencional {
 
   private double largo;
   private double ancho;

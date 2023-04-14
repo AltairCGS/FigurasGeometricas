@@ -1,6 +1,6 @@
 package org.example;
 
-public class TrianguloIsosceles extends Triangulo implements FiguraBidimencional{
+public class TrianguloIsosceles extends Triangulo implements CalculoBidimencional {
   private double ladoIgual;
   private double base;
 

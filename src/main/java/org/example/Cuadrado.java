@@ -1,6 +1,6 @@
 package org.example;
 
-public class Cuadrado extends Figura implements FiguraBidimencional{
+public class Cuadrado extends Figura implements CalculoBidimencional {
   private double longitudDeUnLado;
   public Cuadrado(String nombre, double longitudDeUnLado){
     super.nombre = nombre;
@@ -9,12 +9,14 @@ public class Cuadrado extends Figura implements FiguraBidimencional{
 
   @Override
   public double calcularPerimetro() {
-    return longitudDeUnLado * 4;
+    super.perimetro = longitudDeUnLado * 4;
+    return super.perimetro;
   }
 
   @Override
   public double calcularArea() {
-    return longitudDeUnLado * longitudDeUnLado;
+    super.area = longitudDeUnLado * longitudDeUnLado;
+    return super.area;
   }
 
   @Override

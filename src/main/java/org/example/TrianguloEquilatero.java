@@ -1,6 +1,6 @@
 package org.example;
 
-public class TrianguloEquilatero extends Triangulo implements FiguraBidimencional{
+public class TrianguloEquilatero extends Triangulo implements CalculoBidimencional {
   private double longitudDeUnLado;
   public TrianguloEquilatero(String nombre, double longitudDeUnLado){
     super.nombre = nombre;
